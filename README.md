@@ -25,7 +25,7 @@ Untuk melakukan testing, silakan ikuti dan jalankan perintah-perintah di bawah s
 
 Untuk menjalankannya :
 
-    python app.py
+    $ (venv) python app.py
 
 Untuk dokumentasi (demo)-nya dapat dicoba di sini :
 http://reinhard-rest-api.herokuapp.com/api/
