@@ -1,3 +1,4 @@
+
 API Buku - Flask Restplus + JWT
 ====================
 
@@ -7,6 +8,7 @@ Ada 4 api yang diberikan, yaitu :
 2. API Penerbit, digunakan oleh client penerbit untuk mengolah data buku(crud) sesuai dengan penerbit nya saja. Api ini hanya bisa dipakai dengan menggunakan token JWT dari client yang bertipe internal saja.
 3. API Public, digunakan oleh client public tanpa menggunakan token JWT. Hanya bisa menampilkan daftar buku yang berstatus "show" saja. Juga bisa menampilkan item(satu) buku berdasarkan id.
 4. API Token, digunakan untuk mengclaim/generate token.
+
 
 ## Struktur Tabel
 Database di sini menggunakan sqlite sqlalchemy, terletak di rest_api/db.sqlite.
@@ -21,6 +23,11 @@ Untuk melihat data row client dan buku, bisa diakses melalui demo dokumentasi di
 - get : /internal/buku
 - get : /internal/client
 
+Untuk password client di sini masih belum dienkripsi
+
+## Token
+Token yang digenerate pada api ini menggunakan identitas objek dari client yang memiliki atribut id, username, password, dan type. Jadi dari token key bisa didapatkan informasi berupa atribut id, username, password, dan type. Untuk enkripsi dan dekripsi token key nya menggunakan secret key yang diberikan pada flask_app.config['JWT_SECRET_KEY'].
+
 ## Testing di local (ubuntu)
 Untuk melakukan testing, silakan ikuti dan jalankan perintah-perintah di bawah secara berurutan. Saya menggunakan ubuntu dan virtualenv. **Jangan ikutsertakan tulisan (venv) di terminal, copas yang setelahnya**
 
@@ -34,6 +41,18 @@ Untuk melakukan testing, silakan ikuti dan jalankan perintah-perintah di bawah s
 Untuk menjalankannya :
 
     $ (venv) python app.py
+
+## Deployment ke heroku
+
+    $ heroku login
+    $ create heroku <nama-app>
+    Creating app... done, ⬢ nama-app
+    https://nama-app.herokuapp.com/ | https://git.heroku.com/nama-app.git
+    $ git init
+    $ git add .
+    $ git commit -m "ready to deploy"
+    $ git remote add myheroku https://git.heroku.com/nama-app.git
+    $ git push myheroku master
 
 Untuk dokumentasi (demo)-nya dapat dicoba di sini :
 http://reinhard-rest-api.herokuapp.com/api/
