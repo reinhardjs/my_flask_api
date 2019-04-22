@@ -8,8 +8,12 @@ Ada 4 api yang diberikan, yaitu :
 3. API Public, digunakan oleh client public tanpa menggunakan token JWT. Hanya bisa menampilkan daftar buku yang berstatus "show" saja. Juga bisa menampilkan item(satu) buku berdasarkan id.
 4. API Token, digunakan untuk mengclaim/generate token.
 
-Testing di local (ubuntu)
--------------------------------
+## Struktur Tabel
+Database di sini menggunakan sqlite sqlalchemy, terletak di rest_api/db.sqlite.
+ - **Client** : id, username(unique), password, type("penerbit" atau "internal")
+ - **Buku** : id, isbn, title, penerbit, pengarang, status("show" atau "not show"), client, client_id
+
+## Testing di local (ubuntu)
 Untuk melakukan testing, silakan ikuti dan jalankan perintah-perintah di bawah secara berurutan. Saya menggunakan ubuntu dan virtualenv.
 
 	$ git clone https://github.com/Reinhardjs/my_flask_api
