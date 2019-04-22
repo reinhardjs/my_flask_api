@@ -30,13 +30,16 @@ def rest():
 
 
 
+basedir = os.path.abspath(os.path.dirname(__file__))
+
 def configure_app(flask_app):
     flask_app.secret_key = 'ini-adalah-super-secret-key'
     flask_app.config['SESSION_TYPE'] = 'filesystem'
     flask_app.config['JWT_SECRET_KEY'] = "ini-adalah-secretkey-jwt-asdfjkl"
     # flask_app.config['DEBUG'] = settings.FLASK_DEBUG
     # flask_app.config['SERVER_NAME'] = settings.FLASK_SERVER_NAME
-    flask_app.config['SQLALCHEMY_DATABASE_URI'] = settings.SQLALCHEMY_DATABASE_URI
+    # flask_app.config['SQLALCHEMY_DATABASE_URI'] = settings.SQLALCHEMY_DATABASE_URI
+    flask_app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir  + '/rest_api', 'db.sqlite')
     flask_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = settings.SQLALCHEMY_TRACK_MODIFICATIONS
     flask_app.config['SWAGGER_UI_DOC_EXPANSION'] = settings.RESTPLUS_SWAGGER_UI_DOC_EXPANSION
     flask_app.config['RESTPLUS_VALIDATE'] = settings.RESTPLUS_VALIDATE
