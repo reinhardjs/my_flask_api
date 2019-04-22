@@ -29,14 +29,14 @@ Untuk password client di sini masih belum dienkripsi
 Token yang digenerate pada api ini menggunakan identitas objek dari client yang memiliki atribut id, username, password, dan type. Jadi dari token key bisa didapatkan informasi berupa atribut id, username, password, dan type. Untuk enkripsi dan dekripsi token key nya menggunakan secret key yang diberikan pada flask_app.config['JWT_SECRET_KEY'].
 
 ## Testing di local (ubuntu)
-Untuk melakukan testing, silakan ikuti dan jalankan perintah-perintah di bawah secara berurutan. Saya menggunakan ubuntu dan virtualenv. **Jangan ikutsertakan tulisan (venv) di terminal, copas yang setelahnya**
+Untuk melakukan testing, silakan ikuti dan jalankan perintah-perintah di bawah secara berurutan. Saya menggunakan ubuntu dan virtualenv. Tanda (venv) berarti perintah tersebut dijalankan dalam virtual environment. **Jangan ikutsertakan tulisan (venv) di terminal, copas yang setelahnya ($)**
 
 	$ git clone https://github.com/Reinhardjs/my_flask_api
 	$ cd my_flask_api
 	$ virtualenv -p python3 venv
 	$ source venv/bin/activate
-	$ (venv) pip install -r requirements.txt
-	$ (venv) python setup.py develop
+	(venv) $ pip install -r requirements.txt
+	(venv) $ python setup.py develop
 
 Untuk menjalankannya :
 
