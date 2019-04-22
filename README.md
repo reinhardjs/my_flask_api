@@ -1,4 +1,4 @@
-API Buku - Flask Restplus
+API Buku - Flask Restplus + JWT
 ====================
 
 Ini adalah api buku sederhana yang mana menggunakan JWT untuk autentikasi dalam mengonsumsi API.
