@@ -14,14 +14,14 @@ Database di sini menggunakan sqlite sqlalchemy, terletak di rest_api/db.sqlite.
  - **Buku** : id, isbn, title, penerbit, pengarang, status("show" atau "not show"), client, client_id
 
 ## Testing di local (ubuntu)
-Untuk melakukan testing, silakan ikuti dan jalankan perintah-perintah di bawah secara berurutan. Saya menggunakan ubuntu dan virtualenv.
+Untuk melakukan testing, silakan ikuti dan jalankan perintah-perintah di bawah secara berurutan. Saya menggunakan ubuntu dan virtualenv. **Jangan ikutsertakan tulisan (venv) di terminal, copas yang setelahnya**
 
 	$ git clone https://github.com/Reinhardjs/my_flask_api
 	$ cd my_flask_api
 	$ virtualenv -p python3 venv
 	$ source venv/bin/activate
-	$ pip install -r requirements.txt
-	$ python setup.py develop
+	$ (venv) pip install -r requirements.txt
+	$ (venv) python setup.py develop
 
 Untuk menjalankannya :
 
