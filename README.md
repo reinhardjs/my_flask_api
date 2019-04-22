@@ -13,6 +13,14 @@ Database di sini menggunakan sqlite sqlalchemy, terletak di rest_api/db.sqlite.
  - **Client** : id, username(unique), password, type("penerbit" atau "internal")
  - **Buku** : id, isbn, title, penerbit, pengarang, status("show" atau "not show"), client, client_id
 
+Pada file db.sqlite sudah ada row yang didefinisikan, yaitu :
+Pada client ada 4 client, 2 client internal dan 2 client penerbit
+Pada buku ada 6, yaitu 4 untuk status yang bernilai string, dan 2 yang bernilai show, sehingga client public hanya bisa melihat yang 2 buku show saja.
+
+Untuk melihat data row client dan buku, bisa diakses melalui demo dokumentasi di http://reinhard-rest-api.herokuapp.com/api/, pada bagian :
+- get : /internal/buku
+- get : /internal/client
+
 ## Testing di local (ubuntu)
 Untuk melakukan testing, silakan ikuti dan jalankan perintah-perintah di bawah secara berurutan. Saya menggunakan ubuntu dan virtualenv. **Jangan ikutsertakan tulisan (venv) di terminal, copas yang setelahnya**
 
