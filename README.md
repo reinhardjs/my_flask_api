@@ -40,7 +40,7 @@ Untuk melakukan testing, silakan ikuti dan jalankan perintah-perintah di bawah s
 
 Untuk menjalankannya :
 
-    $ (venv) python app.py
+    (venv) $ python app.py
 
 ## Deployment ke heroku
 
