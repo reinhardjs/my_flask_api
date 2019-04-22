@@ -45,7 +45,7 @@ Untuk menjalankannya :
 ## Deployment ke heroku
 
     $ heroku login
-    $ create heroku <nama-app>
+    $ heroku create <nama-app>
     Creating app... done, ⬢ nama-app
     https://nama-app.herokuapp.com/ | https://git.heroku.com/nama-app.git
     $ git init
