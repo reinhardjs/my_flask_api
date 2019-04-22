@@ -1,2 +1,2 @@
-API Buku sederhana dengan Flask Python
+API Buku dengan Flask Python
 ======================================
